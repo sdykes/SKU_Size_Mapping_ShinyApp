@@ -141,7 +141,7 @@ ui <- page_sidebar(
                        choices = c("Kilograms" = "kg", "Number of bins" = "bins"),
                        selected = "kg"),
           numericInput("batch_packout", "Packout / yield (%)",
-                       value = 85, min = 0, max = 100, step = 0.5),
+                       value = 75, min = 0, max = 100, step = 0.5),
           tags$small(style = "color:grey;",
                      "Packout = Export kg / Input kg. SKU mix is derived from the current Bin splits configuration."),
           tags$hr(),
@@ -243,7 +243,7 @@ server <- function(input, output, session) {
     } else {
       tagList(
         numericInput("batch_bins",   "Input (bins)",  value = 100, min = 0, step = 1),
-        numericInput("batch_bin_kg", "kg per bin",    value = 300, min = 0, step = 10)
+        numericInput("batch_bin_kg", "kg per bin",    value = 425, min = 0, step = 10)
       )
     }
   })
